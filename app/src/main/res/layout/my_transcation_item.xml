@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="2dp"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#43B3D7FF"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12-02-20"
+                    android:textColor="@color/btncolor"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20000"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/balcace"
+                    app:layout_constraintStart_toEndOf="@+id/date"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balcace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21,000"
+
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toStartOf="@+id/transcationid"
+                />
+
+            <TextView
+                android:id="@+id/transcationid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 android:textSize="12dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/textView3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Transcation Id"-->
+            <!--                android:textColor="#000"-->
+            <!--                android:textSize="16dp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/transcationId"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+
+            <!--                android:text="23331313213"-->
+            <!--                android:textColor="#777"-->
+            <!--                android:textSize="16dp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/balance"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Rs.- 2020"-->
+            <!--                android:textSize="16dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/deposite"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Deposite"-->
+            <!--                android:textSize="14dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/balance" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_loan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loan_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#43B3D7FF"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout_loan"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/loan_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12-02-20"
+                    android:textColor="@color/btncolor"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_transaction_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="###"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_amount"
+                    app:layout_constraintStart_toEndOf="@+id/loan_date"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21,000"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_nuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout_loan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

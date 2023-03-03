@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send">Send</string>
+    <string name="login">Login</string>
+    <string name="otp">OTP Verification</string>
+    <string name="verify">Verify</string>
+    <string name="resend"><u>Resend OTP</u></string>
+    <string name="setpin">New Pin</string>
+    <string name="setnewpin">Set New Pin</string>
+    <string name="enterpin">Enter Pin</string>
+    <string name="submit">Submit</string>
+    <string name="Home" />
+    <string name="home_">Home</string>
+    <string name="logout">Logout</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="list" />
+    <string name="transcationlist">Transaction History</string>
+    <string name="transcationdetails">Transaction Details</string>
+    <string name="profile">Profile Detail</string>
+
+    <string name="ssb_account_">SSB Account</string>
+    <string name="deposit_account_">Investment Account</string>
+    <string name="loan_account_">Loan Account</string>
+    <string name="g_loan_account_">Group Loan Account</string>
+
+    <string name="notification_list">Notification List</string>
+    <string name="notification">Details</string>
+</resources>

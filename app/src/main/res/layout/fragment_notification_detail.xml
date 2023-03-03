@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NotificationDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_investment_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:visibility="gone"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_title_invest_acc_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A/C No. : "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_invest_acc_no"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_invest_acc_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="123123"
+                app:layout_constraintStart_toEndOf="@+id/txt_title_invest_acc_no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txt_invest_plan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Plan"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_invest_acc_no" />
+
+            <TextView
+                android:id="@+id/txt_invest_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="plan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_plan_title" />
+
+            <TextView
+                android:id="@+id/txt_invest_deno_amount_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Deno Amount"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_acc_no" />
+
+            <TextView
+                android:id="@+id/txt_invest_deno_amount_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="plan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_deno_amount_title" />
+
+
+            <TextView
+                android:id="@+id/txt_invest_opening_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Opening Date"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_plan_name" />
+
+            <TextView
+                android:id="@+id/txt_invest_opening_date_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="01/01/1970"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_opening_date_title" />
+
+            <TextView
+                android:id="@+id/txt_invest_maturity_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Maturity Date"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_deno_amount_name" />
+
+            <TextView
+                android:id="@+id/txt_invest_maturity_date_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="01/01/1970"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_maturity_date_title" />
+
+
+
+            <TextView
+                android:id="@+id/txt_invest_total_deposit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Deposit"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_opening_date_name" />
+
+            <TextView
+                android:id="@+id/txt_invest_total_deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_total_deposit_title" />
+
+
+            <TextView
+                android:id="@+id/txt_invest_due_amount_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Due Amount"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_maturity_date_name" />
+
+            <TextView
+                android:id="@+id/txt_invest_due_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_due_amount_title" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_invest_total_deposit">
+
+
+                <Button
+                    android:id="@+id/btn_invest_ssb_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/btncolor"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Renewal From SSB"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_invest_upi_payment"
+                    />
+
+                <Button
+                    android:id="@+id/btn_invest_upi_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/btncolor"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Renewal From UPI"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_invest_ssb_payment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_loan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:visibility="gone"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_loan_account_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A/C No. : "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_loan_accountNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="123123"
+                app:layout_constraintStart_toEndOf="@+id/txt_loan_account_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txt_loan_plan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Loan Type"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_loan_accountNo" />
+
+            <TextView
+                android:id="@+id/txt_loan_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="plan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_loan_plan_title" />
+
+
+            <TextView
+                android:id="@+id/txt_loan_amount_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Loan Amount"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_loan_accountNo" />
+
+            <TextView
+                android:id="@+id/txt_loan_amount_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_loan_amount_title" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_loan_running"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_loan_plan_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/txt_loan_issue_date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Issue Date"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_loan_issue_date_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="01/01/1970"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_issue_date_title" />
+
+
+                <TextView
+                    android:id="@+id/txt_loan_instalment_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Instalment/Mode"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_loan_instalment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="01/01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_instalment_title" />
+
+                <TextView
+                    android:id="@+id/txt_loan_emi_amount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="EMI Amount"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_issue_date_name" />
+
+                <TextView
+                    android:id="@+id/txt_loan_emi_amount_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_emi_amount_title" />
+
+
+                <TextView
+                    android:id="@+id/txt_loan_emi_paid_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="EMI Paid"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_instalment_name" />
+
+                <TextView
+                    android:id="@+id/txt_loan_emi_paid_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="00"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_emi_paid_title" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loan_emi_amount_name">
+
+
+                    <Button
+                        android:id="@+id/btn_ssb_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/btncolor"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="EMI From SSB"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_upi_payment"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_upi_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_background"
+                        android:backgroundTint="@color/btncolor"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="EMI From UPI"
+                        android:textAllCaps="false"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/btn_ssb_payment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Small.Circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:elevation="5dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_no_data_found"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="No Details Found"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

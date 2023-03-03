@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_click_card"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Amount to Debit Card"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_cancel_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cancel_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/iv_cancel_dialog"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_cancel_dialog"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_failed"/>
+
+    <EditText
+        android:id="@+id/edt_debit_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/create_request_shap"
+        android:hint="Enter Amount"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+    <TextView
+        android:id="@+id/txt_max_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Amount to Debit Card"
+        android:textColor="@color/red"
+        android:textSize="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_debit_amount" />
+
+    <Button
+        android:id="@+id/btn_submit_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/next_click_card"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_max_amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

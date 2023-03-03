@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_drawer"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_menu_24"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+                app:layout_constraintEnd_toStartOf="@+id/textViewtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewtitle"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="home"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_notification"
+              app:layout_constraintStart_toEndOf="@+id/ic_drawer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:src="@drawable/notification"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewtitle"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_notification_Count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_badge"
+                app:layout_constraintTop_toTopOf="@+id/iv_notification"
+                app:layout_constraintEnd_toEndOf="@+id/iv_notification"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="10dp"
+                android:textColor="@color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Small.Circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:elevation="5dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.shreyaspatil.material.navigationview.MaterialNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/header" />
+</androidx.drawerlayout.widget.DrawerLayout>

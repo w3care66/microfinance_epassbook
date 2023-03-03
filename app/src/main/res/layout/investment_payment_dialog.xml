@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_click_card"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Investment Renewal From SSB"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_cancel_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_cancel_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/iv_cancel_dialog"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_cancel_dialog"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_failed"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inv_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/inv_acc_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="A/C No. :"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inv_acc_no"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+        <TextView
+            android:id="@+id/inv_acc_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/inv_acc_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inv_total_deposit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_inv_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/inv_total_deposit_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total Deposit :"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inv_total_deposit"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/inv_total_deposit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/inv_total_deposit_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inv_due_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_inv_total_deposit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/inv_due_amount_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Due Amount :"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inv_due_amount_no"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/inv_due_amount_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/inv_due_amount_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inv_current_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_inv_due_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/inv_current_amount_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Current Balance SSB:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inv_current_amount_no"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/inv_current_amount_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/inv_current_amount_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/edt_inv_deposit_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/create_request_shap"
+        android:hint="Enter Deposit Amount"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_inv_current_amount" />
+
+
+    <Button
+        android:id="@+id/btn_submit_inv_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/next_click_card"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_inv_deposit_amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
