@@ -175,20 +175,20 @@ public class MyTranscationListFragment extends Fragment implements MyTranscation
                                 noDataFoundTextView.setVisibility(View.GONE);
                             }else{
                                 noDataFoundTextView.setVisibility(View.VISIBLE);
-                                recyclerView.setVisibility(View.GONE);
+                                recyclerView.setVisibility(View.INVISIBLE);
                             }
                             progressBar.setVisibility(View.GONE);
                             getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                         }else {
                             noDataFoundTextView.setVisibility(View.VISIBLE);
-                            recyclerView.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.INVISIBLE);
                             progressBar.setVisibility(View.GONE);
                             getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                             Toast.makeText(getActivity(), response.body().getMessages(), Toast.LENGTH_SHORT).show();
                         }
                     }else {
                         noDataFoundTextView.setVisibility(View.VISIBLE);
-                        recyclerView.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.INVISIBLE);
                         progressBar.setVisibility(View.GONE);
                         getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                         Toast.makeText(getActivity(), "Server Error...", Toast.LENGTH_SHORT).show();
