@@ -154,7 +154,7 @@ public class PaymentOTPFragment extends Fragment {
                                     }
                                 });
                                 dialog.show();
-                            }else {
+                            } else {
                                 final Dialog dialog = new Dialog(getActivity());
                                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                                 dialog.setCancelable(false);
@@ -247,6 +247,7 @@ public class PaymentOTPFragment extends Fragment {
                                     @Override
                                     public void onClick(View v) {
                                         dialog.dismiss();
+                                        getActivity().getSupportFragmentManager().popBackStack();
                                     }
                                 });
                                 dialog.show();
@@ -324,6 +325,7 @@ public class PaymentOTPFragment extends Fragment {
                                     @Override
                                     public void onClick(View v) {
                                         dialog.dismiss();
+                                        getActivity().getSupportFragmentManager().popBackStack();
                                     }
                                 });
                                 dialog.show();
